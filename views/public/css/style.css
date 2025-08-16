@@ -1,0 +1,168 @@
+body{
+      font-family: 'Plus Jakarta Sans', sans-serif !important;
+      display: flex;
+      flex-direction: column ;
+      min-height: 100vh;
+}
+
+.container{
+    flex: 1;
+}  
+
+/* Navbar Styling */
+.navbar {
+    height: 5rem;
+    background-color: white;
+}
+
+/* Compass Icon (Navbar Brand) */
+.fa-solid.fa-compass {
+    color: #fe424d;
+    font-size: 2rem;
+}
+
+/* Navbar Links */
+.nav-link {
+    color: #222222 !important;
+}
+
+/* Footer Styling */
+footer {
+    background-color: #f8f9fa;
+    padding: 1.5rem 1rem;
+    margin-top: 2rem;
+    font-size: 1rem;
+    text-align: center;
+    border-top: 1px solid #ddd;
+}
+
+.f-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.7rem;
+}
+
+/* Social Icons Row */
+.f-info-socials {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.f-info-socials i {
+    font-size: 1.2rem;
+    margin-right:1rem;
+    /* color: #555;
+    transition: color 0.3s ease;
+    cursor: pointer; */
+}
+
+.f-info-socials i:hover {
+    color: #fe424d;
+}
+
+/* Footer Links */
+.f-info-links a {
+    margin: 0 10px;
+    text-decoration: none;
+    color: #007bff;
+    transition: color 0.2s ease;
+}
+
+.f-info-links a:hover {
+    color: #fe424d;
+}
+
+/* Copyright */
+.f-info-brand{
+    color: #333;
+    font-weight: 500;
+}
+
+
+
+
+.f-info-links,
+ .f-info-socials
+ .f-info-brand {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+/* Cards */
+.listing-card{
+   border:none !important;
+   margin-bottom: 2rem;
+   /* margin-left:3rem;
+   margin-right: 3rem; */
+  
+}
+
+.card-img-top {
+  border-radius: 1rem !important;
+  width: 100% !important;
+  object-fit: cover !important;
+}
+
+.card-body{
+   padding: 0 !important;
+}
+ 
+.card-text p{
+   font-weight: 400 !important;
+}
+
+.listing-link{
+   text-decoration: none !important;
+}
+
+/* Card Effect*/
+.card-img-overlay{
+   opacity: 0;
+}
+
+.card-img-overlay:hover{
+   opacity:0.2;
+   background-color: white;
+}
+
+/* New page*/
+.add-btn{
+   background-color: #fe424d !important; 
+   border: none !important;
+}
+
+/* Edit pagr */
+.edit-btn{
+   background-color: #fe424d !important; 
+   border: none !important;
+}
+
+/* show page */
+.show-img{
+  height: 30vh;
+}
+
+.btns{
+    display: flex;
+}
+
+.show-card{
+    padding-left:0 ;
+    padding-right:0 ;
+}
+
+/* Map */
+#map {
+   height: 400px;
+   width: 80vh;
+}
+
+
+
+
+
