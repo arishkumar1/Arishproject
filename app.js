@@ -20,9 +20,14 @@ const listingsRouter = require("./routes/listing.js");
 const reviewRouter = require("./routes/review.js");
 const userRouter = require("./routes/user.js");
 
-// const MONGO_URL = "mongodb://127.0.0.1:27017/wanderlust";
+
 
 const dbUrl = process.env.ATLASDB_URL ;
+
+if (!dbUrl) {
+  console.error("ERROR: ATLASDB_URL environment variable is not set!");
+  process.exit(1);
+}
 
 main()
   .then(() => {
@@ -46,19 +51,19 @@ app.use(express.static(path.join(__dirname, "views/public"))); // Serve static f
 const store = MongoStore.create({
   mongoUrl:dbUrl,
   crypto:{
-    secret:"mysupersecret"
+    secret:process.env.SECRET,
   },
   touchAFTER:24*3600,
 });
 
-store.on("error",() =>{
+store.on("error",(err) =>{
   console.log("ERROR in MONGO SESSION STORR", err);
 });
 
 
 const sessionOption ={
   store:store,
-  secret:"mysupersecret",
+  secret:process.env.SECRET,
   resave:false,
   saveUninitialized:true,
   cookie: {
