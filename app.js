@@ -46,7 +46,7 @@ app.set("views", path.join(__dirname, "views"));
 app.use(express.urlencoded({ extended: true }));
 app.use(methodOverride("_method"));
 app.engine("ejs", ejsMate); // Use ejs-mate for layout support
-app.use(express.static(path.join(__dirname, "views/public"))); // Serve static files
+app.use(express.static(path.join(__dirname, "public"))); // Serve static files
 
 const store = MongoStore.create({
   mongoUrl:dbUrl,
