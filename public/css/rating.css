@@ -194,4 +194,5 @@
 .starability-slot > input:focus ~ label {
   -webkit-transition: background-position .7s;
   transition: background-position .7s;
-}
+} 
+
