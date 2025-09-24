@@ -91,8 +91,11 @@ app.get('/', (req, res) => {
 });
 
 
-app.all("*",(req,res,next)=>{
-  next(new ExpressError(404,"Page not found!"))
+// app.all("*",(req,res,next)=>{
+//   next(new ExpressError(404,"Page not found!"))
+// })
+app.all(/.*/, (req, res, next) => {
+    next(new ExpressError(404, "Page Not Found!"));
 })
 app.use((err,req,res,next)=>{
   let {statusCode=500,message="something went wrong!"}=err;
