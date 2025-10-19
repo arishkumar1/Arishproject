@@ -1,4 +1,4 @@
-mapboxgl.accessToken =map_Token 
+mapboxgl.accessToken =map_Token;
 
     const map = new mapboxgl.Map({
         container: 'map', // container ID
